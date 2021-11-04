@@ -11,7 +11,7 @@ terraform {
 
 provider "azurerm" {
   features {}
- skip_provider_registration = true
+  skip_provider_registration = true
 }
 
 
@@ -70,9 +70,9 @@ resource "azurerm_kubernetes_cluster" "k8s" {
     vm_size    = "Standard_D2_v2"
   }
 
- service_principal {
-  client_id     = var.client_id
-  client_secret = var.client_secret
+  service_principal {
+    client_id     = var.client_id
+    client_secret = var.client_secret
   }
 
   addon_profile {

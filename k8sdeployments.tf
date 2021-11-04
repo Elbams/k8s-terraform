@@ -5,7 +5,7 @@ resource "kubernetes_deployment" "nginx" {
       App = "longlivethebat"
     }
   }
-spec {
+  spec {
     replicas = 2
     selector {
       match_labels = {
@@ -22,10 +22,10 @@ spec {
         container {
           image = "nginx:1.7.8"
           name  = "batman"
-port {
+          port {
             container_port = 80
           }
-resources {
+          resources {
             limits = {
               cpu    = "0.5"
               memory = "512Mi"

@@ -1,6 +1,4 @@
-provider "azurerm" {
-    version = 1.38
-    }
+
 
 resource "azurerm_network_security_group" "nsg" {
   name                = "LabNSG"
@@ -36,7 +34,7 @@ resource "azurerm_network_security_rule" "example2" {
   network_security_group_name = azurerm_network_security_group.nsg.name
 }
 
-  resource "azurerm_network_security_rule" "example4" {
+resource "azurerm_network_security_rule" "example4" {
   name                        = "SSH"
   priority                    = 1100
   direction                   = "Inbound"
@@ -50,7 +48,7 @@ resource "azurerm_network_security_rule" "example2" {
   network_security_group_name = azurerm_network_security_group.nsg.name
 }
 
-  resource "azurerm_network_security_rule" "example3" {
+resource "azurerm_network_security_rule" "example3" {
   name                        = "Web80Out"
   priority                    = 1000
   direction                   = "Outbound"
