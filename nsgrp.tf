@@ -3,7 +3,7 @@
 resource "azurerm_network_security_group" "nsg" {
   name                = "LabNSG"
   location            = "Switzerland North"
-  resource_group_name = "Enter resource group name"
+  resource_group_name = var.resource_group_name
 }
 
 resource "azurerm_network_security_rule" "example1" {
