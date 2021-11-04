@@ -1,10 +1,3 @@
-variable "client_id" {
-  default = ("")
-}
-
-variable "client_secret" {
-  default = ("")
-}
 
 variable "agent_count" {
   default = 1
