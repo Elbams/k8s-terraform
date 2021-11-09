@@ -1,7 +1,5 @@
-
-
 resource "azurerm_network_security_group" "nsg" {
-  name                = "LabNSG"
+  name                = "DemoNSG"
   location            = "Switzerland North"
   resource_group_name = var.resource_group_name
 }
